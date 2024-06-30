@@ -1,0 +1,7 @@
+GIF EBITDA = 
+IF(
+    [YoY EBITDA] > 0 , 
+    [Img Arrow UP], 
+    [Img Arrow Down]
+)
+// this measure returns Arrow up in the card if the measure is greater than 0 and arrow down if not 
