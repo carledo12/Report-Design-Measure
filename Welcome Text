@@ -1,0 +1,13 @@
+Welcome Text =  
+VAR _hour = HOUR(NOW())
+VAR Greeting = 
+SWITCH(
+    TRUE(), 
+    _hour >= 0 && _hour < 5, "Good Night",
+    _hour >= 5 && _hour < 12, "Good Morning",
+    _hour >= 12 && _hour < 18 , "Good Afternoon",
+    _hour >= 18 && _hour < 24, "Good Evening"
+)
+VAR _username = USERPRINCIPALNAME()
+RETURN
+Greeting & " " & _username
